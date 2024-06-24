@@ -203,16 +203,29 @@ body::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
+#disclamerAntiOrdi {
+    display: none;
+    font-size: 1em;
+    align-content: center;
+    text-align: center;
+    font-family: 'madeInfinityThin', cursive;
+    height: 100vh;
+}
+
 @media only screen and (max-width: 767px) {
     #disclamerAntiOrdi {
         display: block;
     }
 
-    .firstPage, .timeline, #containerSecondPage {
+    .firstPage, .timeline {
         display: none;
     }
+
     #containerSecondPage {
-        display: none;
+        display: none !important;
+    }
+    body {
+        overflow: hidden;
     }
 }
 
