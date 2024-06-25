@@ -195,7 +195,6 @@ body::-webkit-scrollbar-thumb:hover {
     white-space: nowrap; /* Empêche le texte de se casser sur plusieurs lignes */
     overflow: hidden;    /* Cache le texte qui dépasse */
     text-overflow: ellipsis; /* Ajoute des points de suspension à la fin si le texte dépasse */
-    width: 100%;         /* Prend toute la largeur disponible */
     box-sizing: border-box;
 }
 
@@ -203,7 +202,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: none;
 }
 
-#disclamerAntiOrdi {
+#disclamerProOrdi, #disclamerFentre1000px {
     display: none;
     font-size: 1em;
     align-content: center;
@@ -214,6 +213,24 @@ body::-webkit-scrollbar-thumb:hover {
 
 @media only screen and (max-width: 767px) {
     #disclamerAntiOrdi {
+        display: block;
+    }
+
+    .firstPage, .timeline {
+        display: none;
+    }
+
+    #containerSecondPage {
+        display: none !important;
+    }
+
+    body {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1026px) {
+    #disclamerFentre1000px {
         display: block;
     }
 
