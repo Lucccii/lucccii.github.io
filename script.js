@@ -53,15 +53,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.getElementById('pdf-opener-web').addEventListener('click', function() {
+document.getElementById('pdf-opener-web-WebCertif').addEventListener('click', function() {
     window.open('Certification/fusionedWebCertif.pdf', '_blank');
 });
 
-document.getElementById('test').addEventListener('click', function() {
+document.getElementById('pdf-opener-web-JeuxVidéosCertif').addEventListener('click', function() {
     window.open('Certification/fusionedJeuxVidéoCertif.pdf', '_blank');
 });
 
-document.getElementById('test2').addEventListener('click', function() {
+document.getElementById('pdf-opener-web-appMobileCertif').addEventListener('click', function() {
     console.log("Hello world !")
     window.open('Certification/appMobileReactNativeCertif.pdf', '_blank');
 });
