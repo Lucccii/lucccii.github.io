@@ -17,12 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
                         const targets = document.querySelectorAll('.ObjectToAnimate');
                         targets.forEach(target => {
                             if (target) {
-                                console.log("ligne 19 script executé sir")
                                 if (target.classList.contains('enchanteOne')) {
-                                    console.log("ligne 21 script executé sir")
                                     target.classList.add('animationToAddToEnchanté');
+                                    console.log("line 22 executed");
+                                    setTimeout(() => {
+                                        document.getElementById('timelineId').style.display = 'block';
+                                        document.getElementById('lilSpaceTransition').style.display = 'block';
+                                        document.getElementById('endPartToActivate').style.display = 'block';
+                                    }, 2000);
                                 } else {
-                                    console.log("ligne 25 script executé sir")
                                     target.classList.add('animationToAddToPm');
                                 }
                             }

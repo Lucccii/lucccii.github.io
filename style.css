@@ -4,7 +4,9 @@
     font-weight: normal;
     font-style: normal;
 }
-
+html {
+    width: 100vw;
+}
 @font-face {
     font-family: 'vokrus';
     src: url('./fonts/Vorkurs/II Vorkurs Bold.ttf') format('truetype');
@@ -218,7 +220,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media only screen and (max-width: 767px) {
-    #disclamerAntiOrdi {
+    #disclamerProOrdi {
         display: block;
     }
 
@@ -235,7 +237,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
-@media only screen and (max-width: 1026px) {
+@media only screen and (min-width: 767px) and (max-width: 1026px) {
     #disclamerFentre1000px {
         display: block;
     }

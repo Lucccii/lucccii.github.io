@@ -60,7 +60,6 @@
     position : relative;
     text-align : center;
     font-size: 50px;
-    width: 50%;
     height: 60px;
     font-family: 'madeInfinityThin', cursive;
 }
@@ -81,6 +80,7 @@ p {
 
 .animationToAddToPm {
     animation: text-clip 1s 0.5s cubic-bezier(0.5, 0, 0.1, 1) forwards;
+    font-size: 45px;
 }
 
 .detectorToApparitionAnimation {
