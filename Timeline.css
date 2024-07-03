@@ -652,7 +652,9 @@ and (-webkit-min-device-pixel-ratio:1)
 /* modification Paulin Manteau */
 
 
-
+ul {
+    margin-left: 0.68rem !important;
+}
 @font-face {
     font-family: 'madeInfinityThin';
     src: url('./fonts/madeInflityFont/MADEINFINITYPersonalUse-Thin.otf') format('opentype');
