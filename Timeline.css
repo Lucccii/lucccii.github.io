@@ -115,7 +115,7 @@
 .timeline:before {
     top: 0;
     bottom: 0;
-    position: fixed;
+    position: absolute;
     content: " ";
     width: 1.5px;
     background-color: var(--clair);
@@ -124,7 +124,9 @@
     height: 100%;
     z-index: -5;
 }
-
+:root {
+    --translate-distance: 0px;
+}
 .timeline:after {
     top: 0;
     bottom: 0;
@@ -133,6 +135,7 @@
     width: 1.5px;
     background-color: var(--foncé);
     left: 50%;
+    transform: translateX(var(--equalizerDistance));
     border: 1.25px solid var(--foncé);
     height: 50vh;
     z-index: -5;
@@ -650,9 +653,7 @@ and (-webkit-min-device-pixel-ratio:1)
 /* modification Paulin Manteau */
 
 
-ul {
-    margin-left: 0.68rem !important;
-}
+
 @font-face {
     font-family: 'madeInfinityThin';
     src: url('./fonts/madeInflityFont/MADEINFINITYPersonalUse-Thin.otf') format('opentype');

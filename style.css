@@ -24,8 +24,6 @@ html {
 div:not(.timeline) {
     background-color: #fefefe;
 }
-
-
 body {
     display: flex;
     justify-content: center;
@@ -43,6 +41,13 @@ body {
     background-color: #fefefe;
 }
 
+ul {
+    margin : 0 !important;
+}
+html {
+    margin : 0 !important;
+    padding : 0 !important;
+}
 .container {
     position: relative;
     z-index: 10;
