@@ -47,6 +47,17 @@ document.getElementById('pdf-opener-web-appMobileCertif').addEventListener('clic
     window.open('Certification/appMobileReactNativeCertif.pdf', '_blank');
 });
 
+function calculateHorizontalDistanceBetweenLines() {
+    const timeline = document.querySelector('.timeline');
+    const beforeStyles = window.getComputedStyle(timeline, '::before');
+    const beforeLeft = parseFloat(beforeStyles.left);
+    const afterStyles = window.getComputedStyle(timeline, '::after');
+    const afterLeft = parseFloat(afterStyles.left);
+    const distanceX = Math.abs(afterLeft - beforeLeft);
+    document.documentElement.style.setProperty('--equalizerDistance', '-' + distanceX + 'px')
+}
+
+calculateHorizontalDistanceBetweenLines()
 
 
 
