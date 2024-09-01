@@ -31,7 +31,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0;
     background-color: #fefefe;
 }
 
@@ -62,7 +61,7 @@ body {
     align-items: center;
     z-index: 1;
     opacity: 0;
-    animation: 2.5s normal 1.75s forwards openingFlashAnimationCircle;
+    animation: 1.5s normal 1.75s forwards openingFlashAnimationCircle;
 }
 
 .circle p {
@@ -71,7 +70,7 @@ body {
     height: 100%;
     text-align: center;
     transform-origin: center;
-    animation: rotate 35s 3.25s linear infinite;
+    animation: rotate 35s 2.25s linear infinite;
     font-family: 'AcuminPro';
 }
 
@@ -95,7 +94,7 @@ body {
     padding-top : 20px;
     font-family: 'Bebas Neue', cursive;
     overflow: hidden;
-    animation: 0.01s normal 1.85s forwards disactiveOverflowHiddenAnimation;
+    animation: 0.01s normal 10s forwards disactiveOverflowHiddenAnimation;
 }
 
 #portfolioTxt{
@@ -103,7 +102,7 @@ body {
     padding : 0;
     transform: translateY(100%);
     z-index: 4;
-    animation: 1.75s normal 0.1s forwards openingFlashAnimation;
+    animation: 1.5s normal 0.1s forwards openingFlashAnimation;
     opacity: 0;
 }
 
@@ -230,6 +229,7 @@ body::-webkit-scrollbar-thumb:hover {
 
     #containerSecondPage {
         display: none !important;
+
     }
 
     body {

@@ -340,7 +340,7 @@
     position: absolute;
     top: 20%;
     left: 50%;
-    margin-left: -60px;
+    margin-left: -50px;
     background-color: white;
     border: 1px solid var(--clair);
     z-index: 100;

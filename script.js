@@ -8,51 +8,29 @@ for (let i = 0; i < text.length; i++) {
     circleText.appendChild(span);
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Fonction de rappel pour l'observateur
-    const callback = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                        // Sélectionne l'élément à animer
-                        const targets = document.querySelectorAll('.ObjectToAnimate');
-                        targets.forEach(target => {
-                            if (target) {
-                                if (target.classList.contains('enchanteOne')) {
-                                    target.classList.add('animationToAddToEnchanté');
-                                    console.log("line 22 executed");
-                                    setTimeout(() => {
-                                        document.getElementById('timelineId').style.display = 'block';
-                                        document.getElementById('lilSpaceTransition').style.display = 'block';
-                                        document.getElementById('endPartToActivate').style.display = 'block';
-                                    }, 2000);
-                                } else {
-                                    target.classList.add('animationToAddToPm');
-                                }
-                            }
-                        });
-                        // Arrête d'observer l'élément déclencheur après l'animation
-                        observer.unobserve(entry.target);
-            }
-        });
-    };
+// Fonction pour faire pop txt enchanté
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) { // Vérifie si l'élément est visible
+            console.log("Hello World  1")
+            document.querySelector('.enchanteOne').classList.add('animationToAddToEnchanté');
+            document.querySelector('.PmOne').classList.add('animationToAddToPm');
+            observer.unobserve(entry.target);
+        }
+    });
+}
+const observerOptions = {
+    root: null, // Utilise le viewport comme conteneur de référence
+    rootMargin: '0px',
+    threshold: 0.1 // L'élément doit être au moins à 10% visible pour déclencher l'observer
+};
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
 
-    // Options pour l'observateur
-    const options = {
-        root: null, // Par rapport à la fenêtre du viewport
-        rootMargin: '0px',
-        threshold: 0.1 // Déclenchement lorsque 10% de l'élément est visible
-    };
+const detector = document.querySelector('.detectorToApparitionAnimation');
+if (detector) {
+    observer.observe(detector); // Commence à observer l'élément cible
 
-    // Crée un nouvel observateur avec la fonction de rappel et les options
-    const observer = new IntersectionObserver(callback, options);
-
-    // Obtenez l'élément déclencheur
-    const detector = document.querySelector('.detectorToApparitionAnimation');
-    if (detector) {
-        // Ajoute l'élément déclencheur à l'observateur
-        observer.observe(detector);
-    }
-});
+}
 
 
 
