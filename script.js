@@ -54,7 +54,7 @@ function calculateHorizontalDistanceBetweenLines() {
     const afterStyles = window.getComputedStyle(timeline, '::after');
     const afterLeft = parseFloat(afterStyles.left);
     const distanceX = Math.abs(afterLeft - beforeLeft);
-    document.documentElement.style.setProperty('--equalizerDistance', '-' + distanceX + 'px')
+    document.documentElement.style.setProperty('--equalizerDistance', distanceX + 'px')
 }
 
 calculateHorizontalDistanceBetweenLines()
