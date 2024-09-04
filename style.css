@@ -30,6 +30,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #fefefe;
+    overscroll-behavior: none;
 }
 
 .firstPage {
