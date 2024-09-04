@@ -61,6 +61,14 @@ calculateHorizontalDistanceBetweenLines()
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const txt = document.querySelector('#portfolioTxt');
+    const circle = document.querySelector('.circle')
+    txt.classList.add('loaded');
+    circle.classList.add('loaded')
+});
+
+
 
 
 
