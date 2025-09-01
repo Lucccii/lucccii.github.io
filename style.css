@@ -282,7 +282,17 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 17px;
 }
 
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
 
+a:hover,
+a:focus,
+a:active {
+    color: #ffffff !important;
+    text-decoration: none;
+}
 
 
 

@@ -47,6 +47,8 @@ document.getElementById('pdf-opener-web-appMobileCertif').addEventListener('clic
     window.open('Certification/appMobileReactNativeCertif.pdf', '_blank');
 });
 
+
+
 function calculateHorizontalDistanceBetweenLines() {
     const timeline = document.querySelector('.timeline');
     const beforeStyles = window.getComputedStyle(timeline, '::before');
